@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/main_LBL_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Object Labeling"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/main_LBL_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take a picture of: target"
+        android:textSize="30sp"
+        android:layout_below="@id/main_LBL_title"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_IMG_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/main_LBL_target"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/main_BTN_camera"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_camera"
+        android:layout_alignStart="@id/main_IMG_image"
+        android:layout_below="@id/main_IMG_image"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_cameraInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open the camera"
+        android:layout_below="@id/main_BTN_camera"
+        android:layout_alignStart="@id/main_IMG_image"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/main_BTN_validate"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_send"
+        android:layout_alignEnd="@id/main_IMG_image"
+        android:layout_below="@id/main_IMG_image"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_validateInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validate the picture"
+        android:layout_below="@id/main_BTN_camera"
+        android:layout_alignEnd="@id/main_IMG_image"/>
+
+</RelativeLayout>
